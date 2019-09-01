@@ -2,6 +2,8 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using NCalc;
+using System.Collections.Generic;
 
 namespace Calculator
 {
@@ -10,6 +12,7 @@ namespace Calculator
 
 #region Controls
         private TextBox txtInput;
+        private TextBox txtOutput;
 #endregion
 
         public MainWindow()
@@ -22,6 +25,7 @@ namespace Calculator
             AvaloniaXamlLoader.Load(this);
 
             this.txtInput = this.Get<TextBox>("txtInput");
+            this.txtOutput = this.Get<TextBox>("txtOutput");
         }
 
         private void Number_Click(object sender, RoutedEventArgs e)
@@ -42,6 +46,22 @@ namespace Calculator
             {
                 this.txtInput.Text += button.Content.ToString();
             }
+        }
+
+        private void Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            Dictionary<string, string> replaceSymbols = new Dictionary<string, string>();
+            replaceSymbols["÷"] = "/";
+            replaceSymbols["×"] = "*";
+            replaceSymbols["√"] = "sqrt";
+
+            string expressionString = this.txtInput.Text;
+            foreach(string oldValue in replaceSymbols.Keys)
+                expressionString = expressionString.Replace(oldValue, replaceSymbols[oldValue]);
+
+            Expression expression = new Expression(expressionString);
+
+            this.txtOutput.Text = expression.Evaluate().ToString();
         }
     }
 }

@@ -50,6 +50,6 @@
         <Button Grid.Row="5" Grid.Column="4" Content="^" Click="Symbol_Click"/>
 
         <!-- Commands -->
-        <Button Grid.Row="5" Grid.Column="2" Content="="/>
+        <Button Grid.Row="5" Grid.Column="2" Content="=" Click="Calculate_Click"/>
     </Grid>
 </Window>
