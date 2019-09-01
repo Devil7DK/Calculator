@@ -9,6 +9,7 @@
         CanResize="false">
 
     <Window.Styles>
+        <!-- Button -->
         <Style x:Key="ButtonStyle" Selector="Button">
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="#ffffff"/>
@@ -31,6 +32,19 @@
         <Style x:Key="GreenStylePressed" Selector="Button.GreenButton:pressed /template/ ContentPresenter">
             <Setter Property="Background" Value="#199a26"/>
         </Style>
+        <!-- TextBox -->
+        <Style x:Key="TextBoxStyle" Selector="TextBox">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+        </Style>
+        <Style x:Key="TextBoxStyleVAlign" Selector="TextBox /template/ TextPresenter">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="TextBoxStyleWatermarkVAlign" Selector="TextBox /template/ Panel">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
     </Window.Styles>
 
     <Grid>
@@ -51,8 +65,8 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="txtInput" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <TextBox x:Name="txtOutput" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsReadOnly="true"/>
+        <TextBox x:Name="txtInput" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="5" FontSize="40" Watermark="Expression" Foreground="#999999"/>
+        <TextBox x:Name="txtOutput" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" FontSize="30" Watermark="Output" Foreground="#828282" IsReadOnly="true"/>
 
         <!-- Numbers -->
         <Button Grid.Row="2" Grid.Column="0" Content="7" Click="Number_Click" Classes="GrayButton"/>
