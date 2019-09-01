@@ -39,15 +39,15 @@
         <Button Grid.Row="5" Grid.Column="1" Content="0" Click="Number_Click"/>
 
         <!-- Symbols -->
-        <Button Grid.Row="5" Grid.Column="0" Content="."/>
-        <Button Grid.Row="2" Grid.Column="3" Content="÷"/>
-        <Button Grid.Row="3" Grid.Column="3" Content="×"/>
-        <Button Grid.Row="4" Grid.Column="3" Content="-"/>
-        <Button Grid.Row="5" Grid.Column="3" Content="+"/>
-        <Button Grid.Row="2" Grid.Column="4" Content="("/>
-        <Button Grid.Row="3" Grid.Column="4" Content=")"/>
-        <Button Grid.Row="4" Grid.Column="4" Content="√"/>
-        <Button Grid.Row="5" Grid.Column="4" Content="^"/>
+        <Button Grid.Row="5" Grid.Column="0" Content="." Click="Symbol_Click"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="÷" Click="Symbol_Click"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="×" Click="Symbol_Click"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="-" Click="Symbol_Click"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="+" Click="Symbol_Click"/>
+        <Button Grid.Row="2" Grid.Column="4" Content="(" Click="Symbol_Click"/>
+        <Button Grid.Row="3" Grid.Column="4" Content=")" Click="Symbol_Click"/>
+        <Button Grid.Row="4" Grid.Column="4" Content="√" Click="Symbol_Click"/>
+        <Button Grid.Row="5" Grid.Column="4" Content="^" Click="Symbol_Click"/>
 
         <!-- Commands -->
         <Button Grid.Row="5" Grid.Column="2" Content="="/>

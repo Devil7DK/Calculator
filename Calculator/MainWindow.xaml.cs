@@ -28,5 +28,20 @@ namespace Calculator
         {
             this.txtInput.Text = this.txtInput.Text + ((Button)sender).Content.ToString();
         }
+
+        private void Symbol_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button) sender;
+            if (button.Content.ToString() == "." && !this.txtInput.Text.Contains("."))
+            {
+                if (this.txtInput.Text == null || this.txtInput.Text.Length <= 0)
+                    this.txtInput.Text = "0";
+                this.txtInput.Text += ".";
+            }
+            else
+            {
+                this.txtInput.Text += button.Content.ToString();
+            }
+        }
     }
 }
