@@ -7,6 +7,32 @@
         Title="Calculator"
         Width="270" Height="400"
         CanResize="false">
+
+    <Window.Styles>
+        <Style x:Key="ButtonStyle" Selector="Button">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#ffffff"/>
+        </Style>
+        <Style x:Key="GrayStyle" Selector="Button.GrayButton">
+            <Setter Property="Background" Value="#505050"/>
+        </Style>
+        <Style x:Key="GrayStyleFocused" Selector="Button.GrayButton:pointerover">
+            <Setter Property="Background" Value="#404040"/>
+        </Style>
+        <Style x:Key="GrayStylePressed" Selector="Button.GrayButton:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#303030"/>
+        </Style>
+        <Style x:Key="GreenStyle" Selector="Button.GreenButton">
+            <Setter Property="Background" Value="#37e148"/>
+        </Style>
+        <Style x:Key="GreenStyleFocused" Selector="Button.GreenButton:pointerover">
+            <Setter Property="Background" Value="#1fc130"/>
+        </Style>
+        <Style x:Key="GreenStylePressed" Selector="Button.GreenButton:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#199a26"/>
+        </Style>
+    </Window.Styles>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -29,29 +55,29 @@
         <TextBox x:Name="txtOutput" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsReadOnly="true"/>
 
         <!-- Numbers -->
-        <Button Grid.Row="2" Grid.Column="0" Content="7" Click="Number_Click"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="8" Click="Number_Click"/>
-        <Button Grid.Row="2" Grid.Column="2" Content="9" Click="Number_Click"/>
-        <Button Grid.Row="3" Grid.Column="0" Content="4" Click="Number_Click"/>
-        <Button Grid.Row="3" Grid.Column="1" Content="5" Click="Number_Click"/>
-        <Button Grid.Row="3" Grid.Column="2" Content="6" Click="Number_Click"/>
-        <Button Grid.Row="4" Grid.Column="0" Content="1" Click="Number_Click"/>
-        <Button Grid.Row="4" Grid.Column="1" Content="2" Click="Number_Click"/>
-        <Button Grid.Row="4" Grid.Column="2" Content="3" Click="Number_Click"/>
-        <Button Grid.Row="5" Grid.Column="1" Content="0" Click="Number_Click"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="7" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="8" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="9" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="4" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="5" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="6" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="4" Grid.Column="0" Content="1" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="4" Grid.Column="1" Content="2" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="3" Click="Number_Click" Classes="GrayButton"/>
+        <Button Grid.Row="5" Grid.Column="1" Content="0" Click="Number_Click" Classes="GrayButton"/>
 
         <!-- Symbols -->
-        <Button Grid.Row="5" Grid.Column="0" Content="." Click="Symbol_Click"/>
-        <Button Grid.Row="2" Grid.Column="3" Content="÷" Click="Symbol_Click"/>
-        <Button Grid.Row="3" Grid.Column="3" Content="×" Click="Symbol_Click"/>
-        <Button Grid.Row="4" Grid.Column="3" Content="-" Click="Symbol_Click"/>
-        <Button Grid.Row="5" Grid.Column="3" Content="+" Click="Symbol_Click"/>
-        <Button Grid.Row="2" Grid.Column="4" Content="(" Click="Symbol_Click"/>
-        <Button Grid.Row="3" Grid.Column="4" Content=")" Click="Symbol_Click"/>
-        <Button Grid.Row="4" Grid.Column="4" Content="√" Click="Symbol_Click"/>
-        <Button Grid.Row="5" Grid.Column="4" Content="^" Click="Symbol_Click"/>
+        <Button Grid.Row="5" Grid.Column="0" Content="." Click="Symbol_Click" Classes="GrayButton"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="÷" Click="Symbol_Click" Classes="GreenButton"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="×" Click="Symbol_Click" Classes="GreenButton"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="-" Click="Symbol_Click" Classes="GreenButton"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="+" Click="Symbol_Click" Classes="GreenButton"/>
+        <Button Grid.Row="2" Grid.Column="4" Content="(" Click="Symbol_Click" Classes="GreenButton"/>
+        <Button Grid.Row="3" Grid.Column="4" Content=")" Click="Symbol_Click" Classes="GreenButton"/>
+        <Button Grid.Row="4" Grid.Column="4" Content="√" Click="Symbol_Click" Classes="GreenButton"/>
+        <Button Grid.Row="5" Grid.Column="4" Content="^" Click="Symbol_Click" Classes="GreenButton"/>
 
         <!-- Commands -->
-        <Button Grid.Row="5" Grid.Column="2" Content="=" Click="Calculate_Click"/>
+        <Button Grid.Row="5" Grid.Column="2" Content="=" Click="Calculate_Click" Classes="GrayButton"/>
     </Grid>
 </Window>
