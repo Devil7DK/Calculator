@@ -5,5 +5,51 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Calculator.MainWindow"
         Title="Calculator">
-    Welcome to Avalonia!
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="txtInput" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBox x:Name="txtOutput" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsReadOnly="true"/>
+
+        <!-- Numbers -->
+        <Button Grid.Row="2" Grid.Column="0" Content="7"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="8"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="9"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="4"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="5"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="6"/>
+        <Button Grid.Row="4" Grid.Column="0" Content="1"/>
+        <Button Grid.Row="4" Grid.Column="1" Content="2"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="3"/>
+        <Button Grid.Row="5" Grid.Column="1" Content="0"/>
+
+        <!-- Symbols -->
+        <Button Grid.Row="5" Grid.Column="0" Content="."/>
+        <Button Grid.Row="2" Grid.Column="3" Content="÷"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="×"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="-"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="+"/>
+        <Button Grid.Row="2" Grid.Column="4" Content="("/>
+        <Button Grid.Row="3" Grid.Column="4" Content=")"/>
+        <Button Grid.Row="4" Grid.Column="4" Content="√"/>
+        <Button Grid.Row="5" Grid.Column="4" Content="^"/>
+
+        <!-- Commands -->
+        <Button Grid.Row="5" Grid.Column="2" Content="="/>
+    </Grid>
 </Window>
