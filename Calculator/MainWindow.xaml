@@ -27,16 +27,16 @@
         <TextBox x:Name="txtOutput" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsReadOnly="true"/>
 
         <!-- Numbers -->
-        <Button Grid.Row="2" Grid.Column="0" Content="7"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="8"/>
-        <Button Grid.Row="2" Grid.Column="2" Content="9"/>
-        <Button Grid.Row="3" Grid.Column="0" Content="4"/>
-        <Button Grid.Row="3" Grid.Column="1" Content="5"/>
-        <Button Grid.Row="3" Grid.Column="2" Content="6"/>
-        <Button Grid.Row="4" Grid.Column="0" Content="1"/>
-        <Button Grid.Row="4" Grid.Column="1" Content="2"/>
-        <Button Grid.Row="4" Grid.Column="2" Content="3"/>
-        <Button Grid.Row="5" Grid.Column="1" Content="0"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="7" Click="Number_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="8" Click="Number_Click"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="9" Click="Number_Click"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="4" Click="Number_Click"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="5" Click="Number_Click"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="6" Click="Number_Click"/>
+        <Button Grid.Row="4" Grid.Column="0" Content="1" Click="Number_Click"/>
+        <Button Grid.Row="4" Grid.Column="1" Content="2" Click="Number_Click"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="3" Click="Number_Click"/>
+        <Button Grid.Row="5" Grid.Column="1" Content="0" Click="Number_Click"/>
 
         <!-- Symbols -->
         <Button Grid.Row="5" Grid.Column="0" Content="."/>
