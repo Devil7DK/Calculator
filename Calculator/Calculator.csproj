@@ -12,6 +12,9 @@
     </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
+    <AvaloniaResource Include="icon.ico"/>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.8.0" />
     <PackageReference Include="Avalonia.Desktop" Version="0.8.0" />
     <PackageReference Include="CoreCLR-NCalc" Version="2.2.63" />
